@@ -10,27 +10,9 @@
 > Key information users need to know to achieve their goal.
 
 ## THE PATH
-.
-├── PREPARE
-│   ├── Discord
-│   ├── Fork Github
-│   ├── Semantic Commit
-│   └── Plugin PlantUML (VSC)
-│
-├── DESAIN
-│   ├── UML         (PlantUML)
-│   ├── ERD         (PlantUML)
-│   └── UI/UX       (Figma)
-├── IMPLEMENTATION
-│   ├── Konsep MVC
-│   ├── ...  
-│   └── ...
-├── SERVER
-│   ├── Konfigurasi Server
-│   ├── DNS
-│   └── ...
-└── ...                 
-
+...
+...
+...
 
 > [!WARNING]
 > Using PHP NATIVE

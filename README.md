@@ -1,9 +1,8 @@
-## PRA TUBES CALON ASISTEN (CA) 2024 ICLABS FIKOM UMI
+## PRA TUBES CALON ASISTEN (CA) 2024 ICLABS FIKOM UMI (WEB)
 
-## NAMA APLIAKSI :smiling_imp:
+## NAMA APLIKASI :smiling_imp:
 > [!NOTE]
 > FULAN - 13X202XXXXX
-> WEB
 
 
 > [!IMPORTANT]
@@ -11,10 +10,19 @@
 
 ## THE PATH
 ...
-...
-...
-...
-
+> PREPARE
+>> Install Discord
+>> Add Plugin PlantUML
+>> Semantic Commit
+> DESIGN
+>> UML
+>> ERD
+>> UI/UX
+> IMPLEMENT
+>> Konsep MVC
+> SERVER
+>> Konfigurasi 
+>> DNS
 
 > [!WARNING]
 > Using PHP NATIVE

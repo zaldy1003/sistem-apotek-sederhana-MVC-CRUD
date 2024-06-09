@@ -1,6 +1,4 @@
-# PRA TUBES CALON ASISTEN (CA) 2024 ICLABS FIKOM UMI
-
-# INFORMATIONS AND RULES
+## PRA TUBES CALON ASISTEN (CA) 2024 ICLABS FIKOM UMI
 
 ## NAMA APLIAKSI :smiling_imp:
 > [!NOTE]
@@ -19,19 +17,19 @@
 │   ├── Semantic Commit
 │   └── Plugin PlantUML (VSC)
 │
-├── DESAIN                   
-│   ├── UML         (PlantUML)  
+├── DESAIN
+│   ├── UML         (PlantUML)
 │   ├── ERD         (PlantUML)
 │   └── UI/UX       (Figma)
 ├── IMPLEMENTATION
-│   ├── Konsep MVC  
-│   ├── ...         
-│   └── ...        
+│   ├── Konsep MVC
+│   ├── ...  
+│   └── ...
 ├── SERVER
 │   ├── Konfigurasi Server
-│   ├── DNS         
-│   └── ...        
-└── ...                     
+│   ├── DNS
+│   └── ...
+└── ...                 
 
 
 > [!WARNING]

@@ -1,0 +1,51 @@
+@startuml usecase 
+
+    skinparam actorStyle  awesome
+    left to right direction
+
+    rectangle usecase_apotek{
+        actor user as user_actor
+        actor admin as admin_actor
+
+        package user{
+            "Login" as (login_user)
+            "Cari obat" as (cari obat)
+            "Pilih obat"as (pilih obat) #palegreen;line:green;text:green
+            "Checkout" as (checkout) #SkyBlue;line:blue;text:blue       
+        }
+
+        rectangle data_base{
+            "Database" as (database)
+        }
+
+        package admin{
+            "Login" as (login_admin)
+            "Lihat pesanan" as (lihat pesanan)
+            "Manajemen pesanan" as (manajemen pesanan) #SkyBlue;line:blue;text:blue
+            "Manajemen obat" as (manajemen obat)
+        }
+
+        ' user
+        :user_actor: -up--> (login_user)
+        (login_user) -up-|> (cari obat)
+        (login_user) -up-|> (pilih obat)
+        (pilih obat) -up-|> (checkout)
+
+
+        ' admin & user
+        (checkout) -down--> (database) #Blue;line.dashed;
+        (database) -up--|> (manajemen pesanan) #Blue;line.dashed;
+
+        (manajemen obat) -down-> (database) #Green;line.dashed;
+        (database) -up--|> (pilih obat) #Green;line.dashed;
+
+
+        ' admin
+        :admin_actor: -down-> (login_admin)
+        (login_admin) -down-|> (manajemen obat) 
+        (login_admin) -down-|> (lihat pesanan)
+        (database) -down-|> (lihat pesanan)
+        (lihat pesanan) -down-|> (manajemen pesanan)
+    }
+
+@enduml

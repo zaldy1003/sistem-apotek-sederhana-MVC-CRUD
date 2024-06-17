@@ -30,6 +30,29 @@
 > Learn more Ajax (Option)
 
 
-
 > [!CAUTION]
 > PHP VERSION LASTES
+
+[NOTE]
+>Mekanisme Penambahan Berbagai Obat dalam Satu Pesanan
+>>1. Keranjang Belanja:
+
+Saat pengguna memilih obat dan menambahkannya ke keranjang belanja, sistem akan menyimpan informasi obat dan jumlahnya di keranjang belanja.
+Keranjang belanja dapat diimplementasikan dengan berbagai cara, seperti:
+Session: Data keranjang belanja disimpan di server dalam variabel session yang terkait dengan ID pengguna.
+Database: Data keranjang belanja disimpan di tabel terpisah di database.
+Cookie: Data keranjang belanja disimpan di browser pengguna dalam cookie.
+2. Formulir Pesanan:
+
+Ketika pengguna ingin melakukan pemesanan, sistem akan menampilkan formulir pemesanan yang berisi informasi berikut:
+Rincian obat yang ada di keranjang belanja, termasuk nama obat, harga, dan jumlah.
+Informasi pengguna, seperti nama, alamat, dan email.
+Metode pembayaran.
+Pengguna dapat mengubah jumlah obat yang ingin dipesan di formulir pemesanan.
+3. Menyimpan Pesanan:
+
+Ketika pengguna mengirimkan formulir pemesanan, sistem akan melakukan validasi data.
+Jika data valid, sistem akan:
+Menyimpan informasi pesanan di tabel Pesanan, termasuk informasi pengguna, alamat, metode pembayaran, dan tanggal pemesanan.
+Untuk setiap obat yang dipesan, sistem akan membuat entri baru di tabel Detail_Pesanan, termasuk ID pesanan, ID obat, dan jumlah obat yang dipesan.
+Mengirimkan email konfirmasi kepada pengguna dengan detail pesanan.

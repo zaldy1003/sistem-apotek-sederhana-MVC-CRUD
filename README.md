@@ -38,19 +38,19 @@
 >>1. Keranjang Belanja:
 Saat pengguna memilih obat dan menambahkannya ke keranjang belanja, sistem akan menyimpan informasi obat dan jumlahnya di keranjang belanja.
 Keranjang belanja dapat diimplementasikan dengan berbagai cara, seperti:
--Session: Data keranjang belanja disimpan di server dalam variabel session yang terkait dengan ID pengguna.
+>>>Session: Data keranjang belanja disimpan di server dalam variabel session yang terkait dengan ID pengguna.
 
--Database: Data keranjang belanja disimpan di tabel terpisah di database.
+>>>Database: Data keranjang belanja disimpan di tabel terpisah di database.
 
--Cookie: Data keranjang belanja disimpan di browser pengguna dalam cookie.
+>>>Cookie: Data keranjang belanja disimpan di browser pengguna dalam cookie.
 >>3. Formulir Pesanan:
 Ketika pengguna ingin melakukan pemesanan, sistem akan menampilkan formulir pemesanan yang berisi informasi berikut:
--Rincian obat yang ada di keranjang belanja, termasuk nama obat, harga, dan jumlah.
+>>>Rincian obat yang ada di keranjang belanja, termasuk nama obat, harga, dan jumlah.
 
--Informasi pengguna, seperti nama, alamat, dan email.
+>>>Informasi pengguna, seperti nama, alamat, dan email.
 >>4. Menyimpan Pesanan:
 Ketika pengguna mengirimkan formulir pemesanan, sistem akan melakukan validasi data.
 Jika data valid, sistem akan:
--Menyimpan informasi pesanan di tabel Pesanan, termasuk informasi pengguna, alamat, metode pembayaran, dan tanggal pemesanan.
+>>>Menyimpan informasi pesanan di tabel Pesanan, termasuk informasi pengguna, alamat, metode pembayaran, dan tanggal pemesanan.
 Untuk setiap obat yang dipesan, sistem akan membuat entri baru di tabel Detail_Pesanan, termasuk ID pesanan, ID obat, dan jumlah obat yang dipesan.
 Mengirimkan email konfirmasi kepada pengguna dengan detail pesanan.

@@ -1,0 +1,58 @@
+@startuml 
+
+entity Obat{
+    *id_obat (INT, Primary Key)
+    nama_obat (VARCHAR(255))
+    harga (DECIMAL(10,2))
+    stok (INT)
+    deskripsi (TEXT)
+}
+
+entity User{
+    *id_user (INT, Primary Key)
+    nama_user (VARCHAR(255))
+    alamat (TEXT)
+    email (VARCHAR(255))
+    password (VARCHAR(255))
+}
+
+entity pesanan{
+    *id_pesanan (INT, Primary Key)
+    id_user (INT, Foreign Key references User(id_user))
+    tanggal_pesanan (DATE)
+    status_pesanan (ENUM('Menunggu', 'Diproses', 'Dikirim', 'Selesai'))
+}
+
+entity detail_pesanan{
+    *id_detail_pesanan (INT, Primary Key)
+    id_pesanan (INT, Foreign Key references Pesanan(id_pesanan))
+    id_obat (INT, Foreign Key references Obat(id_obat))
+    jumlah (INT)
+}
+
+
+Obat ||--|{ detail_pesanan
+' Satu obat dapat memiliki banyak detail pesanan. 
+' berarti satu obat dapat dibeli dalam banyak pesanan yang berbeda.
+' Kolom id_obat di tabel Detail_Pesanan adalah kunci asing yang merujuk ke kolom id_obat di tabel Obat. 
+' hal tersebut memastikan bahwa setiap detail pesanan terkait dengan obat yang valid.
+
+User ||--|{ pesanan
+' Satu user dapat memiliki banyak pesanan. 
+' Ini berarti bahwa satu user dapat melakukan banyak pemesanan obat yang berbeda.
+' Kolom id_pesanan di tabel Detail_Pesanan adalah kunci asing yang merujuk ke kolom id_pesanan di tabel Pesanan. \
+' Hal ini memastikan bahwa setiap detail pesanan terkait dengan pesanan yang valid.
+
+pesanan ||--|{ detail_pesanan
+' Satu user dapat memiliki banyak pesanan. 
+' Ini berarti bahwa satu user dapat melakukan banyak pemesanan obat yang berbeda.
+' Kolom id_user di tabel Pesanan adalah kunci asing yang merujuk ke kolom id_user di tabel User. 
+' Hal ini memastikan bahwa setiap pesanan dibuat oleh user yang valid.
+
+User ||--|| pesanan
+' Satu pesanan dibuat oleh satu user. 
+' Ini berarti bahwa setiap pesanan hanya dapat dikaitkan dengan satu user.
+' Kolom id_user di tabel Pesanan adalah kunci asing yang merujuk ke kolom id_user di tabel User. 
+' Hal ini memastikan bahwa setiap pesanan memiliki user yang terkait dengannya.
+
+@enduml 
